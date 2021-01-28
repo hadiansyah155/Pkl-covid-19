@@ -14,8 +14,7 @@ class KelurahanController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-     
-      public function __construct()
+    public function __construct()
     {
         $this->middleware('auth');
     }
@@ -45,6 +44,14 @@ class KelurahanController extends Controller
      */
     public function store(Request $request)
     {
+        //validasi
+     $request->validate([
+        
+        'nama_kelurahan' => 'required|unique:kelurahans',
+    ], [
+        'nama_kelurahan.required' => 'Nama Kelurahan Wajib Di Isi ',
+        'nama_kelurahan.unique' => 'Nama Kelurahan Sudah Dipakai',
+    ]);
         $kelurahan= new Kelurahan();
         $kelurahan->nama_kelurahan = $request->nama_kelurahan;
         $kelurahan->id_kecamatan = $request->id_kecamatan;

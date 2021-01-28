@@ -6,7 +6,7 @@
     <div class="row justify-content-center">
         <div class="col-md-10">
             <div class="card">
-                <div class="card-header">{{ __('Data Tracking') }}</div>
+                <div class="card-header">{{ __('Create Tracking') }}</div>
                 <div class="row">
                     <div class="col-12">
                         <div class="card">

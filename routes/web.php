@@ -1,3 +1,4 @@
+  
 <?php
 
 use Illuminate\Support\Facades\Route;
@@ -36,11 +37,14 @@ Route::resource('kelurahan',KelurahanController::class);
 use App\Http\Controllers\RwController;
 Route::resource('rw',RwController::class);
 
+use App\Http\Controllers\TrackingController;
+Route::resource('tracking',TrackingController::class);
+
 use App\Http\Controllers\NegaraController;
 Route::resource('negara',NegaraController::class);
 
-use App\Http\Controllers\TrackingController;
-Route::resource('tracking',TrackingController::class);
+use App\Http\Controllers\KasusController;
+Route::resource('kasus',KasusController::class);
 
 Auth::routes();
 

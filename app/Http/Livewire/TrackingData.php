@@ -7,6 +7,7 @@ use App\Models\Kelurahan;
 use App\Models\Kecamatan;
 use App\Models\Kota;
 use App\Models\Provinsi;
+use App\Models\Tracking;
 use Livewire\Component;
 
 class TrackingData extends Component
@@ -16,6 +17,8 @@ class TrackingData extends Component
     public $kecamatan;
     public $kelurahan;
     public $rw;
+    public $tracking1;
+    public $idt;
 
     public $selectedProvinsi = null;
     public $selectedKota = null;
@@ -23,9 +26,10 @@ class TrackingData extends Component
     public $selectedKelurahan = null;
     public $selectedRw = null;
 
-    public function mount($selectedRw = null)
+    public function mount($selectedRw = null, $idt = null)
     {
         $this->provinsi = Provinsi::all();
+              
         $this->kota = Kota::with('provinsi')->get();
         $this->kecamatan = Kecamatan::whereHas('kota', function ($query) {
             $query->whereId(request()->input('id_kota', 0));
@@ -37,9 +41,14 @@ class TrackingData extends Component
             $query->whereId(request()->input('id_kelurahan', 0));
         })->pluck('nama_rw', 'id');
         $this->selectedRw = $selectedRw;
+        $this->idt = $idt;
+        if (!is_null($idt)) {
+            $this->tracking1 = Tracking::findOrFail($idt);
+        }
 
         if (!is_null($selectedRw)) {
             $rw = Rw::with('kelurahan.kecamatan.kota.provinsi')->find($selectedRw);
+            
             if ($rw) {
                 $this->rw = RW::where('id_kelurahan', $rw->id_kelurahan)->get();
                 $this->kelurahan = Kelurahan::where('id_kecamatan', $rw->kelurahan->id_kecamatan)->get();

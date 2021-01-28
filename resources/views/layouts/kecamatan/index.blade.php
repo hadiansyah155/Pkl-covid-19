@@ -36,7 +36,7 @@
              <div class="card-body">
               <table id="example1" class="table table-bordered table-striped">
                     <thead>
-                      <tr class="bg-info">
+                      <tr class="bg-warning">
                         <th scope="col">No</th>
                         <th scope="col">Kode Kecamatan</th>
                         <th scope="col">Kota</th>

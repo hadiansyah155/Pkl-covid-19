@@ -31,7 +31,8 @@ class TrackingController extends Controller
      */
     public function create()
     {
-        return view('layouts.tracking.create');
+        $rw = Rw::all();
+        return view('layouts.tracking.create',compact('rw'));
     }
 
     /**
@@ -43,13 +44,14 @@ class TrackingController extends Controller
     public function store(Request $request)
     {
         $tracking = new Tracking;
-        $tracking->id_rw= $request->id_rw;
-        $tracking ->positif = $request->positif;
-        $tracking ->sembuh = $request->sembuh;
-        $tracking ->meninggal = $request->meninggal;
-        $tracking ->tanggal = $request->tanggal;
-        $tracking ->save();
-        return redirect()->route('tracking.index');
+        $tracking->id_rw = $request->id_rw;
+        $tracking->positif = $request->positif;
+        $tracking->sembuh = $request->sembuh;
+        $tracking->meninggal = $request->meninggal;
+        $tracking->tanggal = $request->tanggal;
+        $tracking->save();
+        return redirect()->route('tracking.index')
+        ->with(['message'=>'Data Berhasil Dibuat']);
     }
 
     /**
@@ -58,9 +60,10 @@ class TrackingController extends Controller
      * @param  \App\Models\Tracking  $tracking
      * @return \Illuminate\Http\Response
      */
-    public function show(Tracking $tracking)
+    public function show($id)
     {
-        //
+        $tracking = Tracking::findOrFail($id);
+        return view('layouts.tracking.show',compact('tracking'));
     }
 
     /**
@@ -69,9 +72,10 @@ class TrackingController extends Controller
      * @param  \App\Models\Tracking  $tracking
      * @return \Illuminate\Http\Response
      */
-    public function edit(Tracking $tracking)
+    public function edit( $id)
     {
-        //
+        $tracking = Tracking::findOrFail($id);
+        return view('layouts.tracking.edit',compact('tracking'));
     }
 
     /**
@@ -81,9 +85,17 @@ class TrackingController extends Controller
      * @param  \App\Models\Tracking  $tracking
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Tracking $tracking)
+    public function update(Request $request,  $id)
     {
-        //
+        $tracking = Tracking::findOrFail($id);
+        $tracking->id_rw = $request->id_rw;
+        $tracking->positif = $request->positif;
+        $tracking->sembuh = $request->sembuh;
+        $tracking->meninggal = $request->meninggal;
+        $tracking->tanggal = $request->tanggal;
+        $tracking->save();
+        return redirect()->route('tracking.index')
+        ->with(['message'=>'Data Berhasil Diedit']);
     }
 
     /**
@@ -92,8 +104,10 @@ class TrackingController extends Controller
      * @param  \App\Models\Tracking  $tracking
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Tracking $tracking)
+    public function destroy($id)
     {
-        //
+        $tracking = Tracking::findOrFail($id)->delete();
+        return redirect()->route('tracking.index')
+                        ->with(['message1'=>'Data Berhasil Dihapus']);
     }
 }

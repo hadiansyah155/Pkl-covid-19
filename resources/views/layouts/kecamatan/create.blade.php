@@ -1,7 +1,6 @@
 @extends('layouts.master')
 
 @section('content')
-
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-10">
@@ -9,18 +8,17 @@
                 <div class="card-header">{{ __('Data Kecamatan') }}</div>
 
                 <div class="card-body">
-                    <form  action="{{route('kecamatan.store')}}" method="post">
-                        @csrf
-
-                <div class="form-group">
+                <form  action="{{route('kecamatan.store')}}" method="post">
+                    @csrf
+                    <div class="form-group">
                     <div class="mb-12>
                         <label for="exampleInputPassword1" class="form-label"><b>Kode Kecamatan</b></label>
-                        <input type="text" class="form-control" id="exampleInputPassword1" 
-                        name="kode_kecamatan" required>
+                        <input type="text" class="form-control" id="exampleInputPassword1" name="kode_kecamatan">
+                        @if($errors->has('kode_kecamatan'))
+                           <span class="text-danger">{{ $errors->first('kode_kecamatan')}}</span>
+                        @endif
                     </div>
-                </div>
-
-                    <div class="form-group">
+                     <div class="form-group">
                         <label for="">Kota</label>
                         <select name="id_kota" class="form-control" required>
                             @foreach($kota as $data)
@@ -28,19 +26,20 @@
                             @endforeach
                         </select>
                     </div>
-
-                    <div class="form-group">
-                        <div class="mb-12>
-                            <label for="exampleInputPassword1" class="form-label"><b>Nama Kecamatan</b></label>
-                            <input type="text" class="form-control" id="exampleInputPassword1" name="nama_kecamatan" required>
-                        </div>
+                      <div class="form-group">
+                    <div class="mb-12>
+                        <label for="exampleInputPassword1" class="form-label"><b>Nama Kecamatan</b></label>
+                        <input type="text" class="form-control" id="exampleInputPassword1" name="nama_kecamatan">
+                        @if($errors->has('nama_kecamatan'))
+                           <span class="text-danger">{{ $errors->first('nama_kecamatan')}}</span>
+                        @endif
+                    </div>
                      </div>
-
                     <div class="form-group">
-                        <button type="submit" class="btn btn-outline-primary">Simpan</button>
+                    <button type="submit" class="btn btn-outline-primary">Simpan</button>
                     </div>
-                        </form>
-                    </div>
+                </form>
+                </div>
                 </div>
             </div>
         </div>

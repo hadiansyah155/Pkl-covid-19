@@ -44,7 +44,7 @@
     
   </div>
   <!-- /.content-wrapper -->
-
+@include('layouts.components.footer')
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
@@ -89,5 +89,6 @@
 <script src="{{asset('assets/dist/js/demo.js')}}"></script>
 @yield('js')
 @livewireScripts
+@include('sweetalert::alert')
 </body>
 </html>
