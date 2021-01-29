@@ -28,6 +28,7 @@
             
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link active">
+              <i class="fas fa-angle-left right"></i>
               <i class="fas fa-globe-americas nav-icon"></i>
               <p>
                 Global
@@ -54,6 +55,7 @@
          
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link active">
+              <i class="fas fa-angle-left right"></i>
               <i class="fas fa-globe-americas nav-icon"></i>
               <p>
                 Indonesia
