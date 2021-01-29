@@ -30,7 +30,7 @@
             @endif
 
             <div class="card">
-                <div class="card-header">{{ __('Data corona') }}
+                <div class="card-header">{{ __('Data Corona') }}
                 <a href="{{route('tracking.create')}}" class="float-right btn btn-outline-primary">Tambah Data</a>
             </div>
 

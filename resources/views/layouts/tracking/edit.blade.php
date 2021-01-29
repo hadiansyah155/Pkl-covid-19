@@ -16,7 +16,7 @@
                             @method('put')
                             @livewire('tracking-data',['selectedRw' => $tracking->id_rw, 'idt' => $tracking->id])
                             <div class="form-group">
-                            <button type="submit" class="float-right btn btn-primary">Edit</button>
+                            <button type="submit" class="float-right btn btn-outline-primary">Edit</button>
                             </div>
                             </form>
                             </div>
