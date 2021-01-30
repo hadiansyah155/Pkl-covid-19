@@ -11,7 +11,7 @@
                 <form  action="{{route('provinsi.store')}}" method="post">
                     @csrf
                    <div class="form-group">
-                    <div class="mb-12>
+                    <div class="mb-12">
                         <label for="exampleInputEmail1" class="form-label">Kode Provinsi</label>
                         <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="kd_prov">
                         @if($errors->has('kd_prov'))

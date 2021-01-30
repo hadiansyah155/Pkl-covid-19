@@ -49,7 +49,7 @@ class ProvinsiController extends Controller
     public function store(Request $request)
     {
          //validasi
-         $request->validate([
+       /*  $request->validate([
              'kd_prov' => 'required|max:4|unique:provinsis',
              'nm_prov' => 'required|unique:provinsis',
          ], [
@@ -58,7 +58,7 @@ class ProvinsiController extends Controller
              'kd_prov.unique' => 'Kode Sudah Dipakai',
              'nm_prov.required' => 'Nama Provinsi Harus Di Isi ',
              'nm_prov.unique' => 'Kode Sudah Dipakai',
-         ]);
+         ]);*/
 
         $provinsi = new Provinsi();
         $provinsi->kode_provinsi = $request->kd_prov;

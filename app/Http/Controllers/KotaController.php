@@ -44,7 +44,7 @@ class KotaController extends Controller
      */
     public function store(Request $request)
     {
-        //validasi
+        /*//validasi
         $request->validate([
             'kode_kota' => 'required|max:4|unique:kotas',
             'nama_provinsi' => 'required|unique:kotas',
@@ -54,7 +54,7 @@ class KotaController extends Controller
             'kode_kota.unique' => 'Kode Sudah Dipakai',
             'nama_provinsi.required' => 'Nama Provinsi Harus Di Isi ',
             'nama_provinsi.unique' => 'Kode Sudah Dipakai',
-        ]);
+        ]);*/
         $kota= new Kota();
         $kota->kode_kota = $request->kode_kota;
         $kota->nama_kota = $request->nama_kota;
