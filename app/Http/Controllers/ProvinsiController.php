@@ -22,11 +22,8 @@ class ProvinsiController extends Controller
     public function index()
     {
        
-        
-       
         $provinsi = Provinsi::all();
         return view('layouts.provinsi.index',compact('provinsi'));
-
       
     }
 
@@ -48,17 +45,12 @@ class ProvinsiController extends Controller
      */
     public function store(Request $request)
     {
-         //validasi
-       /*  $request->validate([
-             'kd_prov' => 'required|max:4|unique:provinsis',
-             'nm_prov' => 'required|unique:provinsis',
-         ], [
-             'kd_prov.required' => 'Kode Wajib Di Isi',
-             'kd_prov.max' => 'Kode Maksimal 4 Nomor',
-             'kd_prov.unique' => 'Kode Sudah Dipakai',
-             'nm_prov.required' => 'Nama Provinsi Harus Di Isi ',
-             'nm_prov.unique' => 'Kode Sudah Dipakai',
-         ]);*/
+         // validasi
+          $request->validate([
+              'nm_prov' => 'required',
+          ], [
+              'nm_prov.required' => 'Nama Provinsi Harus Di Isi ',
+          ]);
 
         $provinsi = new Provinsi();
         $provinsi->kode_provinsi = $request->kd_prov;

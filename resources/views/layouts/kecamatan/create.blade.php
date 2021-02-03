@@ -10,18 +10,18 @@
                 <div class="card-body">
                 <form  action="{{route('kecamatan.store')}}" method="post">
                     @csrf
-                    <div class="form-group">
+                   <div class="form-group">
                     <div class="mb-12>
                         <label for="exampleInputPassword1" class="form-label"><b>Kode Kecamatan</b></label>
                         <input type="text" class="form-control" id="exampleInputPassword1" name="kode_kecamatan">
-                        @if($errors->has('kode_kecamatan'))
+                        <!-- @if($errors->has('kode_kecamatan'))
                            <span class="text-danger">{{ $errors->first('kode_kecamatan')}}</span>
-                        @endif
+                        @endif -->
                     </div>
                      <div class="form-group">
                         <label for="">Kota</label>
                         <select name="id_kota" class="form-control" required>
-                            @foreach($kota as $data)
+                             @foreach($kota as $data)
                                 <option value="{{$data->id}}">{{$data->nama_kota}}</option>
                             @endforeach
                         </select>

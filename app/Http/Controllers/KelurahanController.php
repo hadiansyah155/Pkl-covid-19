@@ -44,14 +44,14 @@ class KelurahanController extends Controller
      */
     public function store(Request $request)
     {
-        //validasi
-    /* $request->validate([
+         //validasi
+      $request->validate([
         
-        'nama_kelurahan' => 'required|unique:kelurahans',
-    ], [
-        'nama_kelurahan.required' => 'Nama Kelurahan Wajib Di Isi ',
-        'nama_kelurahan.unique' => 'Nama Kelurahan Sudah Dipakai',
-    ]);*/
+         'nama_kelurahan' => 'required',
+     ], [
+         'nama_kelurahan.required' => 'Nama Kelurahan Harus Di Isi ',
+     ]);
+     
         $kelurahan= new Kelurahan();
         $kelurahan->nama_kelurahan = $request->nama_kelurahan;
         $kelurahan->id_kecamatan = $request->id_kecamatan;

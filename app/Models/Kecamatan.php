@@ -8,7 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Kecamatan extends Model
 {
     use HasFactory;
-
+    
+    protected $table = "kecamatans";
     protected $fillable = ['id', 'nama_kecamatan', 'kode_kecamatan','id_kota'];
     public $timestamps = true;
 

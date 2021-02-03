@@ -43,13 +43,13 @@ class RwController extends Controller
      */
     public function store(Request $request)
     {
-         //validasi
-/*         $request->validate([
-            'nama_rw' => 'required|unique:rws',
-        ], [
-            'nama_rw.required' => 'Nama Rw Wajib Di Isi ',
-            'nama_rwi.unique' => 'Nama Rw Sudah Dipakai',
-        ]);*/
+          // validasi
+          $request->validate([
+             'nama_rw' => 'required',
+         ], [
+             'nama_rw.required' => 'Nama Rw Harus Di Isi ',
+         ]);
+
         $rw= new Rw();
         $rw->nama_rw= $request->nama_rw;
         $rw->id_kelurahan = $request->id_kelurahan;

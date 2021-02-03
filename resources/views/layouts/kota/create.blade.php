@@ -10,21 +10,19 @@
                 <div class="card-body">
                 <form  action="{{route('kota.store')}}" method="post">
                     @csrf
-                   <div class="form-group">
+                    <div class="form-group">
                     <div class="mb-12>
                         <label for="exampleInputEmail1" class="form-label"><b>Kode Kota</b></label>
                         <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="kode_kota">
-                        @if($errors->has('kode_kota'))
-                           <span class="text-danger">{{ $errors->first('kode_kota')}}</span>
-                        @endif
+                       
                     </div>
                      </div>
                      <div class="form-group">
                         <label for="">Provinsi</label>
                         <select name="id_provinsi" class="form-control" >
-                            @foreach($provinsi as $data)
+                             @foreach($provinsi as $data)
                                 <option value="{{$data->id}}">{{$data->nama_provinsi}}</option>
-                            @endforeach
+                            @endforeach 
                         </select>
                     </div>
                       <div class="form-group">
