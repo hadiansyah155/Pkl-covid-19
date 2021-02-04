@@ -10,6 +10,7 @@ use App\Models\Kecamatan;
 use App\Models\Kelurahan;
 use App\Models\Rw;
 use App\Models\Tarcking;
+use Carbon\Carbon;
 use DB;
 
 
@@ -77,6 +78,7 @@ class ApiController extends Controller
                     DB::raw('SUM(positif) as Positif'),
                     DB::raw('SUM(sembuh) as Sembuh'),
                     DB::raw('SUM(meninggal) as Meninggal'),
+                    DB::raw('MAX(tanggal) as tanggal'),
                 ])
                 ->groupBy('tanggal')->get();
 
@@ -168,7 +170,7 @@ class ApiController extends Controller
         ], 200);
     }
 
-    public function all()
+    public function indonesia()
     {
         $positif = DB::table('rws')
               ->select('trackings.sembuh',
@@ -242,5 +244,32 @@ class ApiController extends Controller
                       'Jumlah Meninggal' => $meninggal,       
             'message' => 'Berhasil'
         ], 200);
+    }
+
+    
+       public function tracking()
+    {
+    $hariini = Carbon::now()->format('d-m-Y'); 
+        $data_sekarang = DB::table('trackings')
+                    ->select(DB::raw('SUM(trackings.positif) as Positif'), 
+                             DB::raw('SUM(trackings.sembuh) as Sembuh'), 
+                             DB::raw('SUM(trackings.meninggal) as Meninggal'),
+                             DB::raw('MAX(tanggal) as Tanggal'))
+                    ->whereDay('tanggal', '=' , $hariini)
+                    ->get();
+        $data = DB::table('trackings')
+                    ->select(DB::raw('SUM(trackings.positif) as Positif'), 
+                             DB::raw('SUM(trackings.sembuh) as Sembuh'), 
+                             DB::raw('SUM(trackings.meninggal) as Meninggal'))
+                    ->get();
+        $res = [
+            'success' => true,
+            'data' => [
+                'hari_ini' => $data_sekarang, 
+                'total' => $data
+            ],
+            'message' => 'berhasil'
+        ];
+        return response()->json($res, 200);
     }
 }
