@@ -21,6 +21,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
  Route::get('Rw', [ApiController::class, 'rw']);
  Route::get('Provinsi', [ApiController::class, 'provinsi']);
+ Route::get('Kota', [ApiController::class, 'kota']);
+ Route::get('Kecamatan', [ApiController::class, 'kecamatan']);
+ Route::get('Kelurahan', [ApiController::class, 'kelurahan']);
+ Route::get('All', [ApiController::class, 'all']);
+ Route::get('Positif', [ApiController::class, 'positif']);
+ Route::get('Sembuh', [ApiController::class, 'sembuh']);
+ Route::get('Meninggal', [ApiController::class, 'meninggal']);
 
 
 // API CRUD
