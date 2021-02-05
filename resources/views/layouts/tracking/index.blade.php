@@ -54,16 +54,16 @@
                                     @foreach($tracking as $data)
 
                                         <tr>
-                                            <th scope="row"><center>{{$no++}}</center></th>
-                                            <td><center>Kelurahan : {{$data->rw->kelurahan->nama_kelurahan}}<br>
+                                            <th scope="row">{{$no++}}</th>
+                                            <td>Kelurahan : {{$data->rw->kelurahan->nama_kelurahan}}<br>
                                             Kecamatan : {{$data->rw->kelurahan->kecamatan->nama_kecamatan}}<br>
                                             Kota : {{$data->rw->kelurahan->kecamatan->kota->nama_kota}}<br>
                                             Provinsi : {{$data->rw->kelurahan->kecamatan->kota->provinsi->nama_provinsi}}</center></td>
-                                            <td><center>{{$data->rw->nama_rw}}</center></td>
-                                            <td><center>{{$data->positif}}</center></td>
-                                            <td><center>{{$data->sembuh}}</center></td>
-                                            <td><center>{{$data->meninggal}}</center></td>
-                                            <td><center>{{$data->tanggal}}</center></td>
+                                            <td>{{$data->rw->nama_rw}}</td>
+                                            <td>{{$data->positif}}</td>
+                                            <td>{{$data->sembuh}}</td>
+                                            <td>{{$data->meninggal}}</td>
+                                            <td>{{$data->tanggal}}</td>
                                             <td>
                                             <form action="{{route('tracking.destroy',$data->id)}}"  method="POST">
                                             @csrf
