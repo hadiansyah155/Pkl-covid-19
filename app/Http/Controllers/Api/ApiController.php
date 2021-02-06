@@ -11,6 +11,7 @@ use App\Models\Kelurahan;
 use App\Models\Rw;
 use App\Models\Tarcking;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Http;
 use DB;
 
 
@@ -271,5 +272,38 @@ class ApiController extends Controller
             'message' => 'berhasil'
         ];
         return response()->json($res, 200);
+    }
+
+    public $data = [];
+    public function global()
+    {
+        $response = Http::get('https://api.kawalcorona.com')->json();
+        foreach ($response as $data => $val) {
+            $raw = $val ['attributes' ];
+            $res = [/*'Negara' => $raw['Country_Region'],
+                    'Positif' => $raw['Confirmed'],
+                    'Sembuh' => $raw['Recovered'],
+                    'Meninggal' => $raw['Deaths']*/
+
+                    'OBJECTID' => $raw['OBJECTID'],
+                    'Country_Region' => $raw['Country_Region'],
+                    'Last_Update' => $raw['Last_Update'],
+                    'Lat' => $raw['Lat'],
+                    'Long_' => $raw['Long_'],
+                    'Confirmed' => $raw['Confirmed'],
+                    'Deaths' => $raw['Deaths'],
+                    'Recovered' => $raw['Recovered'],
+                    'Active' => $raw['Active']
+            ];
+
+            array_push ($this->data, $res);
+        }
+            $data = [
+                'success' => true,
+                'Data Global' => $this->data,
+                'message' => 'Berhasil'
+            ];
+
+            return response()->json($data, 200);
     }
 }

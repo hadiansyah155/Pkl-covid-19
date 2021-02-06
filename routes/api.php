@@ -20,6 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
  //CRUD TRACKING-COVID
+Route::get('Global', [ApiController::class, 'global']);
  Route::get('Tracking', [ApiController::class, 'tracking']);
  Route::get('Rw', [ApiController::class, 'rw']);
  Route::get('Provinsi', [ApiController::class, 'provinsi']);

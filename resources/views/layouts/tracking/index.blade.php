@@ -37,7 +37,7 @@
             <div class="card-body">
                     <table id="example1" class="table table-bordered table-striped">
                                <thead>
-                                       <tr class="bg-warning">
+                                       <tr class="bg-dark">
                                             <th scope="col">No</th>
                                             <th scope="col"><center>Lokasi</center></th>
                                             <th scope="col"><center>RW</center></th>
