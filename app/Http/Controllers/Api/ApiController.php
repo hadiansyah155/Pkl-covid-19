@@ -280,12 +280,12 @@ class ApiController extends Controller
         $response = Http::get('https://api.kawalcorona.com')->json();
         foreach ($response as $data => $val) {
             $raw = $val ['attributes' ];
-            $res = [/*'Negara' => $raw['Country_Region'],
+            $res = ['Negara' => $raw['Country_Region'],
                     'Positif' => $raw['Confirmed'],
                     'Sembuh' => $raw['Recovered'],
-                    'Meninggal' => $raw['Deaths']*/
+                    'Meninggal' => $raw['Deaths'],
 
-                    'OBJECTID' => $raw['OBJECTID'],
+                   /* 'OBJECTID' => $raw['OBJECTID'],
                     'Country_Region' => $raw['Country_Region'],
                     'Last_Update' => $raw['Last_Update'],
                     'Lat' => $raw['Lat'],
@@ -293,7 +293,7 @@ class ApiController extends Controller
                     'Confirmed' => $raw['Confirmed'],
                     'Deaths' => $raw['Deaths'],
                     'Recovered' => $raw['Recovered'],
-                    'Active' => $raw['Active']
+                    'Active' => $raw['Active']*/
             ];
 
             array_push ($this->data, $res);
