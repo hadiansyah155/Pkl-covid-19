@@ -29,13 +29,6 @@
 
   <!-- Template Main CSS File -->
   <link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: eBusiness - v2.2.1
-  * Template URL: https://bootstrapmade.com/ebusiness-bootstrap-corporate-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body data-spy="scroll" data-target="#navbar-example">
@@ -45,7 +38,7 @@
     <div class="container d-flex">
 
       <div class="logo mr-auto">
-        <h1 class="text-light"><a href="index.html"><span>KAWAL CORONA</span></a></h1>
+        <h1 class="text-light"><a href="index.html"><span>TRACKING COVID-19</span></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="{{asset('assets/img/logo.png')}}" alt="" class="img-fluid"></a>-->
       </div>
@@ -54,12 +47,8 @@
         <ul>
           <li class="active"><a href="#header">Home</a></li>
           <li><a href="#about">About</a></li>
-          <!--  -->
-          <li><a href="#contact">Contact</a></li>
-
         </ul>
       </nav><!-- .nav-menu -->
-
     </div>
   </header><!-- End Header -->
 
@@ -339,7 +328,7 @@
         <div class="row">
           <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="section-headline text-center">
-              <h2>About eBusiness</h2>
+              <h2>Corona Virus</h2>
             </div>
           </div>
         </div>
@@ -349,7 +338,7 @@
             <div class="well-left">
               <div class="single-well">
                 <a href="#">
-                  <img src="{{asset('assets/img/about/1.jpg')}}" alt="">
+                  <img src="{{asset('assets/img/about/covid-19-0-alodokter.jpg')}}" alt="">
                 </a>
               </div>
             </div>
@@ -359,28 +348,19 @@
             <div class="well-middle">
               <div class="single-well">
                 <a href="#">
-                  <h4 class="sec-head">project Maintenance</h4>
+                  <h4 class="sec-head">COVID-19 adalah penyakit yang disebabkan oleh virus severe
+                     acute respiratory syndrome coronavirus 2 (SARS-CoV-2). COVID-19 dapat menyebabkan 
+                     gangguan sistem pernapasan, mulai dari gejala yang ringan seperti flu, hingga 
+                     infeksi paru-paru, seperti pneumonia.</h4>
                 </a>
                 <p>
-                  Redug Lagre dolor sit amet, consectetur adipisicing elit. Itaque quas officiis iure aspernatur sit adipisci quaerat unde at nequeRedug Lagre dolor sit amet, consectetur adipisicing elit. Itaque quas officiis iure
-                </p>
-                <ul>
-                  <li>
-                    <i class="fa fa-check"></i> Interior design Package
-                  </li>
-                  <li>
-                    <i class="fa fa-check"></i> Building House
-                  </li>
-                  <li>
-                    <i class="fa fa-check"></i> Reparing of Residentail Roof
-                  </li>
-                  <li>
-                    <i class="fa fa-check"></i> Renovaion of Commercial Office
-                  </li>
-                  <li>
-                    <i class="fa fa-check"></i> Make Quality Products
-                  </li>
-                </ul>
+                  Kasus pertama penyakit ini terjadi di kota Wuhan, Cina, pada akhir Desember 2019. 
+                  Setelah itu, COVID-19 menular antarmanusia dengan sangat cepat dan menyebar ke puluhan negara,
+                   termasuk Indonesia, hanya dalam beberapa bulan.
+                  Penyebarannya yang cepat membuat beberapa negara menerapkan
+                   kebijakan untuk memberlakukan lockdown untuk mencegah penyebaran virus Corona. 
+                   Di Indonesia, pemerintah menerapkan kebijakan Pembatasan Sosial Berskala Besar (PSBB)
+                    untuk menekan penyebaran virus ini.</p>
               </div>
             </div>
           </div>
@@ -389,208 +369,14 @@
       </div>
     </div><!-- End About Section -->
 
-    <!-- ======= Services Section ======= -->
-   
-    <!-- ======= Rviews Section ======= -->
-    <div class="reviews-area">
-      <div class="row no-gutters">
-        <div class="col-lg-6 py-0">
-          <img src="{{asset('assets/img/about/2.jpg')}}" alt="" class="img-fluid">
-        </div>
-        <div class="col-lg-6 work-right-text d-flex align-items-center">
-          <div class="px-5 py-5 py-lg-0">
-            <h2>working with us</h2>
-            <h5>Web Design, Ready Home, Construction and Co-operate Outstanding Buildings.</h5>
-            <a href="#contact" class="ready-btn scrollto">Contact us</a>
-          </div>
-        </div>
-      </div>
-    </div><!-- End Rviews Section -->
-
-    <!-- ======= Portfolio Section ======= -->
-    >
-
-    <!-- ======= Contact Section ======= -->
-    <div id="contact" class="contact-area">
-      <div class="contact-inner area-padding">
-        <div class="contact-overly"></div>
-        <div class="container ">
-          <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12">
-              <div class="section-headline text-center">
-                <h2>Contact us</h2>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <!-- Start contact icon column -->
-            <div class="col-md-4 col-sm-4 col-xs-12">
-              <div class="contact-icon text-center">
-                <div class="single-icon">
-                  <i class="fa fa-mobile"></i>
-                  <p>
-                    Call: +1 5589 55488 55<br>
-                    <span>Monday-Friday (9am-5pm)</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <!-- Start contact icon column -->
-            <div class="col-md-4 col-sm-4 col-xs-12">
-              <div class="contact-icon text-center">
-                <div class="single-icon">
-                  <i class="fa fa-envelope-o"></i>
-                  <p>
-                    Email: info@example.com<br>
-                    <span>Web: www.example.com</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <!-- Start contact icon column -->
-            <div class="col-md-4 col-sm-4 col-xs-12">
-              <div class="contact-icon text-center">
-                <div class="single-icon">
-                  <i class="fa fa-map-marker"></i>
-                  <p>
-                    Location: A108 Adam Street<br>
-                    <span>NY 535022, USA</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-
-            <!-- Start Google Map -->
-            <div class="col-md-6 col-sm-6 col-xs-12">
-              <!-- Start Map -->
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22864.11283411948!2d-73.96468908098944!3d40.630720240038435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sbg!4v1540447494452" width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
-              <!-- End Map -->
-            </div>
-            <!-- End Google Map -->
-
-            <!-- Start  contact -->
-            <div class="col-md-6 col-sm-6 col-xs-12">
-              <div class="form contact-form">
-                <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                  <div class="form-group">
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                    <div class="validate"></div>
-                  </div>
-                  <div class="form-group">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                    <div class="validate"></div>
-                  </div>
-                  <div class="form-group">
-                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                    <div class="validate"></div>
-                  </div>
-                  <div class="form-group">
-                    <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                    <div class="validate"></div>
-                  </div>
-                  <div class="mb-3">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your message has been sent. Thank you!</div>
-                  </div>
-                  <div class="text-center"><button type="submit">Send Message</button></div>
-                </form>
-              </div>
-            </div>
-            <!-- End Left contact -->
-          </div>
-        </div>
-      </div>
-    </div><!-- End Contact Section -->
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer>
-    <div class="footer-area">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <div class="footer-content">
-              <div class="footer-head">
-                <div class="footer-logo">
-                  <h2><span>e</span>Business</h2>
-                </div>
-
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
-                <div class="footer-icons">
-                  <ul>
-                    <li>
-                      <a href="#"><i class="fa fa-facebook"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-google"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-pinterest"></i></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- end single footer -->
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <div class="footer-content">
-              <div class="footer-head">
-                <h4>information</h4>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-                </p>
-                <div class="footer-contacts">
-                  <p><span>Tel:</span> +123 456 789</p>
-                  <p><span>Email:</span> contact@example.com</p>
-                  <p><span>Working Hours:</span> 9am-5pm</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- end single footer -->
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <div class="footer-content">
-              <div class="footer-head">
-                <h4>Instagram</h4>
-                <div class="flicker-img">
-                  <a href="#"><img src="{{asset('assets/img/portfolio/1.jpg')}}" alt=""></a>
-                  <a href="#"><img src="{{asset('assets/img/portfolio/2.jpg')}}" alt=""></a>
-                  <a href="#"><img src="{{asset('assets/img/portfolio/3.jpg')}}" alt=""></a>
-                  <a href="#"><img src="{{asset('assets/img/portfolio/4.jpg')}}" alt=""></a>
-                  <a href="#"><img src="{{asset('assets/img/portfolio/5.jpg')}}" alt=""></a>
-                  <a href="#"><img src="{{asset('assets/img/portfolio/6.jpg')}}" alt=""></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="footer-area-bottom">
       <div class="container">
         <div class="row">
           <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="copyright text-center">
               <p>
-                &copy; Copyright <strong>eBusiness</strong>. All Rights Reserved
+                &copy; Copyright <strong>Hadiansyah</strong>. All Rights Reserved
               </p>
-            </div>
-            <div class="credits">
-              <!--
-              All the links in the footer should remain intact.
-              You can delete the links only if you purchased the pro version.
-              Licensing information: https://bootstrapmade.com/license/
-              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=eBusiness
-            -->
-              Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
             </div>
           </div>
         </div>
